@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Qahwa For Life — Inspired by Madinah</title>
   <meta name="description" content="Qahwa For Life — a café inspired by Madinah, coming to Bethnal Green, London." />
+  <meta name="theme-color" content="#17382b" />
+  <meta property="og:title" content="Qahwa For Life — Inspired by Madinah" />
+  <meta property="og:description" content="A café shaped by the warmth, welcome and calm of Madinah — coming to Bethnal Green." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Noto+Naskh+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
@@ -15,7 +20,8 @@
     .final-cta .final-arabic{position:relative;z-index:1;margin:0 0 30px;font-size:clamp(30px,3vw,48px);line-height:1;color:var(--green);opacity:.82}
     .final-cta h2{position:relative;z-index:1;margin:0 0 48px;max-width:900px;font-size:clamp(70px,8vw,132px);line-height:.86;letter-spacing:-.055em;font-weight:400;color:var(--green)}
     .final-cta h2 i{font-weight:400;color:#68745f}
-    .final-cta .button{position:relative;z-index:1}
+    .final-cta .button{position:relative;z-index:1;color:var(--green);border-color:rgba(23,56,43,.45)}
+    .final-cta .button:hover{background:var(--green);color:var(--white);border-color:var(--green)}
     .final-cta::before{top:7vh;right:7vw;font-size:clamp(180px,22vw,340px);color:rgba(23,56,43,.055)}
     .footer{position:relative;display:grid;grid-template-columns:1fr auto;gap:60px;padding:44px 7vw 32px;background:var(--green);color:rgba(250,247,239,.76);border-top:1px solid rgba(250,247,239,.12)}
     .footer>div:first-child{display:flex;align-items:baseline;gap:18px}
@@ -25,7 +31,9 @@
     .footer-links a{font:9px 'IBM Plex Mono',monospace;letter-spacing:.13em;color:rgba(250,247,239,.62);text-decoration:none;transition:color .25s ease}
     .footer-links a:hover{color:var(--sand)}
     .footer p{grid-column:1/-1;margin:0;padding-top:20px;border-top:1px solid rgba(250,247,239,.12);font:8px 'IBM Plex Mono',monospace;letter-spacing:.14em;color:rgba(250,247,239,.38);text-transform:uppercase}
-    @media(max-width:760px){.final-cta{min-height:68vh;padding:95px 7vw 100px}.final-cta .final-arabic{margin-bottom:24px;font-size:30px}.final-cta h2{font-size:clamp(56px,14vw,82px);line-height:.9;margin-bottom:38px}.final-cta::before{font-size:170px;right:-3vw;top:50px}.footer{grid-template-columns:1fr;padding:34px 7vw 28px;gap:26px}.footer>div:first-child{display:flex;flex-direction:column;gap:10px}.footer-links{gap:22px;flex-wrap:wrap}.footer p{padding-top:18px}}
+    @media(max-width:900px){.site-header nav{display:flex;gap:16px}.site-header nav a{font-size:9px;letter-spacing:.06em}.site-header{height:80px}.final-cta{min-height:68vh;padding:95px 7vw 100px}.final-cta .final-arabic{margin-bottom:24px;font-size:30px}.final-cta h2{font-size:clamp(56px,14vw,82px);line-height:.9;margin-bottom:38px}.final-cta::before{font-size:170px;right:-3vw;top:50px}.footer{grid-template-columns:1fr;padding:34px 7vw 28px;gap:26px}.footer>div:first-child{display:flex;flex-direction:column;gap:10px}.footer-links{gap:22px;flex-wrap:wrap}.footer p{padding-top:18px}}
+    @media(max-width:560px){.site-header nav{gap:11px}.site-header nav a{font-size:8px}.site-header{height:76px}.final-cta{padding:86px 7vw 92px}.final-cta h2{font-size:52px}.footer-links{gap:18px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero-image,.visual-image,.arrival-image,.circle-link,.button,.site-header nav a{animation:none!important;transition:none!important}}
   </style>
 </head>
 <body>
