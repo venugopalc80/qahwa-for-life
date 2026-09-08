@@ -10,6 +10,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Noto+Naskh+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles-v2.css" />
   <link rel="stylesheet" href="visual-overrides.css" />
+  <style>
+    .final-cta{min-height:74vh;padding:13vh 10vw 12vh;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;background:var(--sand);overflow:hidden}
+    .final-cta .final-arabic{position:relative;z-index:1;margin:0 0 30px;font-size:clamp(30px,3vw,48px);line-height:1;color:var(--green);opacity:.82}
+    .final-cta h2{position:relative;z-index:1;margin:0 0 48px;max-width:900px;font-size:clamp(70px,8vw,132px);line-height:.86;letter-spacing:-.055em;font-weight:400;color:var(--green)}
+    .final-cta h2 i{font-weight:400;color:#68745f}
+    .final-cta .button{position:relative;z-index:1}
+    .final-cta::before{top:7vh;right:7vw;font-size:clamp(180px,22vw,340px);color:rgba(23,56,43,.055)}
+    .footer{position:relative;display:grid;grid-template-columns:1fr auto;gap:60px;padding:44px 7vw 32px;background:var(--green);color:rgba(250,247,239,.76);border-top:1px solid rgba(250,247,239,.12)}
+    .footer>div:first-child{display:flex;align-items:baseline;gap:18px}
+    .footer .arabic{font-size:26px;line-height:1;color:var(--sand)}
+    .footer strong{font:500 12px 'DM Sans',sans-serif;letter-spacing:.16em;color:rgba(250,247,239,.86)}
+    .footer-links{display:flex;gap:28px;align-items:center}
+    .footer-links a{font:9px 'IBM Plex Mono',monospace;letter-spacing:.13em;color:rgba(250,247,239,.62);text-decoration:none;transition:color .25s ease}
+    .footer-links a:hover{color:var(--sand)}
+    .footer p{grid-column:1/-1;margin:0;padding-top:20px;border-top:1px solid rgba(250,247,239,.12);font:8px 'IBM Plex Mono',monospace;letter-spacing:.14em;color:rgba(250,247,239,.38);text-transform:uppercase}
+    @media(max-width:760px){.final-cta{min-height:68vh;padding:95px 7vw 100px}.final-cta .final-arabic{margin-bottom:24px;font-size:30px}.final-cta h2{font-size:clamp(56px,14vw,82px);line-height:.9;margin-bottom:38px}.final-cta::before{font-size:170px;right:-3vw;top:50px}.footer{grid-template-columns:1fr;padding:34px 7vw 28px;gap:26px}.footer>div:first-child{display:flex;flex-direction:column;gap:10px}.footer-links{gap:22px;flex-wrap:wrap}.footer p{padding-top:18px}}
+  </style>
 </head>
 <body>
   <div class="topline"><span>قهوة للحياة</span><span>Inspired by Madinah · Coming to Bethnal Green</span><a href="https://www.instagram.com/qahwaforlife/" target="_blank" rel="noreferrer">Instagram ↗</a></div>
@@ -100,7 +117,7 @@
     <section class="final-cta">
       <div class="final-arabic">قهوة للحياة</div>
       <h2>For the coffee.<br />For the company.<br /><i>For life.</i></h2>
-      <a class="button" href="https://www.tiktok.com/@qahwaforlife" target="_blank" rel="noreferrer">Follow the journey ↗</a>
+      <a class="button" href="https://www.instagram.com/qahwaforlife/" target="_blank" rel="noreferrer">Follow the journey ↗</a>
     </section>
   </main>
 
