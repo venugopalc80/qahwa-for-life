@@ -5,7 +5,7 @@
 .hero-image,.visual-image,.arrival-image{filter:saturate(.8) contrast(1.04)}
 
 /* Brand identity: Arabic type, quiet geometry and editorial interaction. */
-.arabic,.final-arabic,.arabic-line,.hero-stamp,.manifesto-side span{font-family:'Noto Naskh Arabic','Cormorant Garamond',serif}
+.arabic,.final-arabic,.arabic-line,.hero-stamp,.manifesto-side span,.menu-arabic{font-family:'Noto Naskh Arabic','Cormorant Garamond',serif}
 .hero::after{content:'';position:absolute;inset:0;pointer-events:none;opacity:.105;background-image:linear-gradient(45deg,transparent 46%,rgba(250,247,239,.42) 47%,transparent 48%),linear-gradient(-45deg,transparent 46%,rgba(250,247,239,.42) 47%,transparent 48%);background-size:42px 42px;mix-blend-mode:soft-light}
 .hero::before{content:'MADINAH  →  BETHNAL GREEN';position:absolute;right:6vw;top:50%;z-index:2;writing-mode:vertical-rl;transform:translateY(-50%);font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.18em;color:rgba(250,247,239,.7)}
 .hero-content,.hero-stamp{z-index:2}
@@ -21,16 +21,30 @@
 .visual-image,.arrival-image{transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
 .visual-break:hover .visual-image{transform:scale(1.025)}
 .arrival:hover .arrival-image{transform:scale(1.018)}
-.menu-row{cursor:default}
+
+/* Menu interaction: restrained Arabic layer, not a gimmick. */
+.menu-row{cursor:default;position:relative;transition:padding-left .35s ease,background .35s ease}
+.menu-row::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--sand);transform:scaleY(0);transform-origin:bottom;transition:transform .35s ease}
+.menu-row:hover{padding-left:14px;background:rgba(250,247,239,.035)}
+.menu-row:hover::before{transform:scaleY(1);transform-origin:top}
 .menu-arrow{transition:transform .3s ease}
 .menu-row:hover .menu-arrow{transform:translate(5px,-5px)}
 .menu-row h3{transition:letter-spacing .3s ease}
 .menu-row:hover h3{letter-spacing:.005em}
+.menu-arabic{margin-left:auto;margin-right:28px;font-size:24px;line-height:1;color:rgba(250,247,239,.72);opacity:0;transform:translateX(8px);transition:opacity .35s ease,transform .35s ease}
+.menu-row:hover .menu-arabic{opacity:1;transform:translateX(0)}
+
 .button{transition:background .3s ease,color .3s ease,border-color .3s ease,transform .3s ease}
 .button:hover{background:var(--white);color:var(--green);border-color:var(--white);transform:translateY(-2px)}
 .final-cta{position:relative}
 .final-cta::before{content:'ق';position:absolute;right:7vw;top:28px;font-family:'Noto Naskh Arabic',serif;font-size:180px;line-height:1;color:rgba(23,56,43,.07);pointer-events:none}
-@keyframes hero-breathe{from{transform:scale(1.015)}to{transform:scale(1.035)}}
+
+/* Editorial rhythm: keep the manifesto intentional without letting it become a dead zone. */
+.manifesto{min-height:76vh!important}
+.manifesto-copy{max-width:980px}
+
+/* Small-screen polish. */
 @media(min-width:900px){.hero h1{font-size:clamp(72px,8.2vw,138px);line-height:.91;letter-spacing:-.045em}.hero p:not(.kicker){font-size:15px}.hero-stamp{transform:translateY(-4px)}}
-@media(max-width:760px){.hero::before{right:18px;top:auto;bottom:26px;transform:none;writing-mode:horizontal-tb;font-size:8px;letter-spacing:.13em}.hero-image{animation:none;transform:scale(1.01)}}
-@media(max-width:560px){.hero::after{background-size:30px 30px;opacity:.07}.final-cta::before{font-size:120px;right:3vw;top:20px}}
+@media(max-width:760px){.hero::before{right:18px;top:auto;bottom:26px;transform:none;writing-mode:horizontal-tb;font-size:8px;letter-spacing:.13em}.hero-image{animation:none;transform:scale(1.01)}.menu-arabic{opacity:.7;transform:none;margin-right:16px}.menu-row:hover{padding-left:8px}.manifesto{min-height:64vh!important}.manifesto-copy{padding-inline:6vw}}
+@media(max-width:560px){.hero::after{background-size:30px 30px;opacity:.07}.final-cta::before{font-size:120px;right:3vw;top:20px}.menu-arabic{font-size:20px;margin-right:10px}.menu-row p{max-width:230px}}
+@keyframes hero-breathe{from{transform:scale(1.015)}to{transform:scale(1.035)}}
