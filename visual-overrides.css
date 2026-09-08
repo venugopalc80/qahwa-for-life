@@ -1,5 +1,28 @@
-/* Visual direction pass: replace generic stock imagery with imagery closer to Qahwa For Life's story. */
+/* Visual direction pass: imagery + restrained brand details. */
 .hero-image{background-image:url('https://images.unsplash.com/photo-1516007359037-f8f56dd361ff?auto=format&fit=crop&w=2200&q=88');background-position:center 52%}
 .visual-image{background-image:linear-gradient(180deg,rgba(13,43,31,.08),rgba(13,43,31,.48)),url('https://images.unsplash.com/photo-1612689780131-a93ae5d1dab7?auto=format&fit=crop&w=2200&q=88');background-position:center 42%}
 .arrival-image{background-image:url('https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1500&q=88');background-position:center}
 .hero-image,.visual-image,.arrival-image{filter:saturate(.82) contrast(1.03)}
+
+/* Brand identity: Arabic type, quiet geometric texture and editorial interaction. */
+.arabic,.final-arabic,.arabic-line,.hero-stamp,.manifesto-side span{font-family:'Noto Naskh Arabic','Cormorant Garamond',serif}
+.hero::after{content:'';position:absolute;inset:0;pointer-events:none;opacity:.12;background-image:linear-gradient(45deg,transparent 46%,rgba(250,247,239,.42) 47%,transparent 48%),linear-gradient(-45deg,transparent 46%,rgba(250,247,239,.42) 47%,transparent 48%);background-size:42px 42px;mix-blend-mode:soft-light}
+.hero-content,.hero-stamp{z-index:2}
+.site-header nav a{position:relative;transition:opacity .25s ease}
+.site-header nav a::after{content:'';position:absolute;left:0;bottom:-7px;width:100%;height:1px;background:var(--green);transform:scaleX(0);transform-origin:right;transition:transform .28s ease}
+.site-header nav a:hover::after{transform:scaleX(1);transform-origin:left}
+.circle-link{transition:background .3s ease,color .3s ease,transform .3s ease}
+.circle-link:hover{background:var(--white);color:var(--green);transform:translateY(4px)}
+.visual-image,.arrival-image{transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.visual-break:hover .visual-image{transform:scale(1.025)}
+.arrival:hover .arrival-image{transform:scale(1.018)}
+.menu-row{cursor:default}
+.menu-arrow{transition:transform .3s ease}
+.menu-row:hover .menu-arrow{transform:translate(5px,-5px)}
+.menu-row h3{transition:letter-spacing .3s ease}
+.menu-row:hover h3{letter-spacing:.005em}
+.button{transition:background .3s ease,color .3s ease,border-color .3s ease}
+.button:hover{background:var(--white);color:var(--green);border-color:var(--white)}
+.final-cta{position:relative}
+.final-cta::before{content:'ق';position:absolute;right:7vw;top:28px;font-family:'Noto Naskh Arabic',serif;font-size:180px;line-height:1;color:rgba(23,56,43,.07);pointer-events:none}
+@media(max-width:560px){.hero::after{background-size:30px 30px;opacity:.08}.final-cta::before{font-size:120px;right:3vw;top:20px}}
