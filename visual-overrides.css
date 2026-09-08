@@ -1,0 +1,5 @@
+/* Visual direction pass: replace generic stock imagery with imagery closer to Qahwa For Life's story. */
+.hero-image{background-image:url('https://images.unsplash.com/photo-1516007359037-f8f56dd361ff?auto=format&fit=crop&w=2200&q=88');background-position:center 52%}
+.visual-image{background-image:linear-gradient(180deg,rgba(13,43,31,.08),rgba(13,43,31,.48)),url('https://images.unsplash.com/photo-1612689780131-a93ae5d1dab7?auto=format&fit=crop&w=2200&q=88');background-position:center 42%}
+.arrival-image{background-image:url('https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1500&q=88');background-position:center}
+.hero-image,.visual-image,.arrival-image{filter:saturate(.82) contrast(1.03)}
