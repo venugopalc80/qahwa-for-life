@@ -22,6 +22,15 @@
 .visual-break:hover .visual-image{transform:scale(1.025)}
 .arrival:hover .arrival-image{transform:scale(1.018)}
 
+/* Madinah transition: let the image arrive out of the manifesto instead of feeling like a new page. */
+.visual-break{background:var(--cream);height:84vh;min-height:600px}
+.visual-break::before{content:'';position:absolute;inset:0 0 auto;height:19vh;z-index:1;pointer-events:none;background:linear-gradient(180deg,var(--cream) 0%,rgba(243,238,227,.78) 24%,rgba(243,238,227,0) 100%)}
+.visual-break::after{content:'';position:absolute;inset:auto 0 0;height:24vh;z-index:1;pointer-events:none;background:linear-gradient(0deg,rgba(9,27,20,.38),rgba(9,27,20,0))}
+.visual-image{inset:-1vh 0 -1vh;background-image:linear-gradient(180deg,rgba(13,43,31,.04),rgba(13,43,31,.46)),url('https://images.unsplash.com/photo-1612689780131-a93ae5d1dab7?auto=format&fit=crop&w=2200&q=90');background-position:center 42%;transform:scale(1.015)}
+.visual-caption{z-index:2;bottom:8vh}
+.visual-caption span{letter-spacing:.16em}
+.visual-caption p{margin-top:10px}
+
 /* Menu interaction: restrained Arabic layer, not a gimmick. */
 .menu-row{cursor:default;position:relative;grid-template-columns:90px minmax(0,1fr) auto 50px;transition:padding-left .35s ease,background .35s ease}
 .menu-row::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--sand);transform:scaleY(0);transform-origin:bottom;transition:transform .35s ease}
@@ -50,7 +59,7 @@
 
 /* Small-screen polish. */
 @media(min-width:900px){.hero h1{font-size:clamp(72px,8.2vw,138px);line-height:.91;letter-spacing:-.045em}.hero p:not(.kicker){font-size:15px}.hero-stamp{transform:translateY(-4px)}}
-@media(max-width:900px){.menu-row{grid-template-columns:55px minmax(0,1fr) auto 30px}.menu-arabic{margin-left:12px;margin-right:12px;font-size:21px}.manifesto{grid-template-columns:1fr;gap:38px;min-height:auto!important;padding-top:105px;padding-bottom:115px}.manifesto-side{height:auto;max-width:250px;padding:20px 0 0;border-left:0;border-top:1px solid var(--line)}.manifesto-side .manifesto-index{margin-bottom:16px}.manifesto-copy{padding-top:0;max-width:760px}.manifesto .display{font-size:clamp(56px,9vw,84px);line-height:.93}}
-@media(max-width:760px){.hero::before{right:18px;top:auto;bottom:26px;transform:none;writing-mode:horizontal-tb;font-size:8px;letter-spacing:.13em}.hero-image{animation:none;transform:scale(1.01)}.menu-arabic{opacity:.7;transform:none;margin-right:12px}.menu-row:hover{padding-left:8px}.manifesto{min-height:auto!important;padding-inline:7vw;gap:32px}.manifesto-copy{padding-inline:0}}
-@media(max-width:560px){.hero::after{background-size:30px 30px;opacity:.07}.final-cta::before{font-size:120px;right:3vw;top:20px}.menu-row{grid-template-columns:34px minmax(0,1fr) auto 22px;min-height:120px}.menu-arabic{font-size:19px;margin-left:6px;margin-right:6px}.menu-row p{max-width:230px}.manifesto{padding-top:78px;padding-bottom:88px;gap:28px}.manifesto-side{padding-top:18px}.manifesto-side .manifesto-index{font-size:9px;margin-bottom:12px}.manifesto-side strong{font-size:15px;letter-spacing:.12em}.manifesto .display{font-size:52px;line-height:.95}}
+@media(max-width:900px){.menu-row{grid-template-columns:55px minmax(0,1fr) auto 30px}.menu-arabic{margin-left:12px;margin-right:12px;font-size:21px}.manifesto{grid-template-columns:1fr;gap:38px;min-height:auto!important;padding-top:105px;padding-bottom:115px}.manifesto-side{height:auto;max-width:250px;padding:20px 0 0;border-left:0;border-top:1px solid var(--line)}.manifesto-side .manifesto-index{margin-bottom:16px}.manifesto-copy{padding-top:0;max-width:760px}.manifesto .display{font-size:clamp(56px,9vw,84px);line-height:.93}.visual-break{height:68vh;min-height:500px}.visual-break::before{height:13vh}.visual-break::after{height:18vh}.visual-caption{bottom:6vh}}
+@media(max-width:760px){.hero::before{right:18px;top:auto;bottom:26px;transform:none;writing-mode:horizontal-tb;font-size:8px;letter-spacing:.13em}.hero-image{animation:none;transform:scale(1.01)}.menu-arabic{opacity:.7;transform:none;margin-right:12px}.menu-row:hover{padding-left:8px}.manifesto{min-height:auto!important;padding-inline:7vw;gap:32px}.manifesto-copy{padding-inline:0}.visual-break{height:60vh;min-height:430px}.visual-break::before{height:10vh}.visual-caption{left:7vw;bottom:5vh}}
+@media(max-width:560px){.hero::after{background-size:30px 30px;opacity:.07}.final-cta::before{font-size:120px;right:3vw;top:20px}.menu-row{grid-template-columns:34px minmax(0,1fr) auto 22px;min-height:120px}.menu-arabic{font-size:19px;margin-left:6px;margin-right:6px}.menu-row p{max-width:230px}.manifesto{padding-top:78px;padding-bottom:88px;gap:28px}.manifesto-side{padding-top:18px}.manifesto-side .manifesto-index{font-size:9px;margin-bottom:12px}.manifesto-side strong{font-size:15px;letter-spacing:.12em}.manifesto .display{font-size:52px;line-height:.95}.visual-break{height:56vh;min-height:410px}.visual-break::before{height:8vh}.visual-break::after{height:15vh}}
 @keyframes hero-breathe{from{transform:scale(1.015)}to{transform:scale(1.035)}}
